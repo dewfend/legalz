@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crypto Legal – Crypto & Web3 Legal Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Crypto & Web3 legal services for asset recovery, inheritance planning and digital asset structuring across key jurisdictions."
+  />
+  <style>
+    :root {
+      --bg-dark: #050816;
+      --bg-section: #0b1020;
+      --accent: #34d399;
+      --accent-soft: rgba(52, 211, 153, 0.12);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2937;
+      --card-bg: #050816;
+      --max-width: 1080px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at 0 0, #111827, #020617);
+      color: var(--text-main);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Layout */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Header / Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 8, 22, 0.95),
+        rgba(5, 8, 22, 0.65),
+        transparent
+      );
+      border-bottom: 1px solid rgba(15, 23, 42, 0.8);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #6ee7b7, #0f766e, #111827);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #ecfdf5;
+      box-shadow: 0 0 24px rgba(52, 211, 153, 0.4);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .logo-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      padding: 0.3rem 0;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, #34d399, #22c55e);
+      transition: width 0.22s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f9fafb;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+      .nav-cta {
+        display: flex;
+      }
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: #ecfdf5;
+      background: linear-gradient(
+        135deg,
+        rgba(52, 211, 153, 0.16),
+        rgba(16, 185, 129, 0.05)
+      );
+      padding: 0.4rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: linear-gradient(
+        135deg,
+        rgba(52, 211, 153, 0.28),
+        rgba(16, 185, 129, 0.14)
+      );
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border-color: #4b5563;
+      background: transparent;
+      color: var(--text-muted);
+    }
+
+    .btn-outline:hover {
+      color: #e5e7eb;
+      border-color: #9ca3af;
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 0 3rem;
+    }
+
+    @media (min-width: 900px) {
+      .hero {
+        padding: 4rem 0 3.75rem;
+      }
+    }
+
+    .hero-inner {
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+        align-items: center;
+        gap: 3.5rem;
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 0.18rem 0.65rem 0.18rem 0.25rem;
+      margin-bottom: 0.8rem;
+      background: radial-gradient(
+        circle at 0 0,
+        rgba(56, 189, 248, 0.22),
+        rgba(15, 23, 42, 0.9)
+      );
+      border: 1px solid rgba(55, 65, 81, 0.8);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #bfdbfe;
+    }
+
+    .eyebrow-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #22c55e, #047857);
+      box-shadow: 0 0 18px rgba(52, 211, 153, 0.6);
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      margin: 0 0 0.8rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #6ee7b7, #22c55e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      margin: 0 0 1.4rem;
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      max-width: 34em;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .badge {
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      color: #cbd5f5;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #34d399;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .hero-right {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: radial-gradient(
+          circle at 0 0,
+          rgba(56, 189, 248, 0.1),
+          transparent 55%
+        ),
+        radial-gradient(circle at 100% 0, rgba(52, 211, 153, 0.12), transparent),
+        rgba(15, 23, 42, 0.96);
+      padding: 1.4rem 1.4rem 1.6rem;
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-right-title {
+      font-size: 0.92rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-right-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .metric {
+      border-radius: 14px;
+      border: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 0.5rem 0.6rem;
+    }
+
+    .metric-label {
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-bottom: 0.2rem;
+    }
+
+    .metric-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-list {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    .hero-list li + li {
+      margin-top: 0.25rem;
+    }
+
+    /* Sections */
+    .section {
+      padding: 2.8rem 0;
+      background: radial-gradient(circle at 0 0, #020617, #020617);
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .section:nth-of-type(even) {
+      background: radial-gradient(circle at 100% 0, #020617, #020617);
+    }
+
+    .section-header {
+      margin-bottom: 1.8rem;
+    }
+
+    .section-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.7rem;
+      color: #6b7280;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0 0 0.3rem;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 34em;
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 1.6rem;
+    }
+
+    @media (min-width: 900px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 1.1rem 1.2rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 550;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-sub {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.86rem;
+      color: var(--text-main);
+    }
+
+    .card ul li + li {
+      margin-top: 0.35rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      font-size: 0.74rem;
+      padding: 0.2rem 0.5rem;
+      color: var(--text-muted);
+    }
+
+    /* List blocks */
+    .list-block {
+      margin-bottom: 1.2rem;
+    }
+
+    .list-block-title {
+      font-size: 0.96rem;
+      font-weight: 550;
+      margin-bottom: 0.25rem;
+    }
+
+    .list-block p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin: 0 0 0.4rem;
+    }
+
+    .list-block ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.86rem;
+    }
+
+    .list-block ul li + li {
+      margin-top: 0.25rem;
+    }
+
+    /* FAQ */
+    .faq-item + .faq-item {
+      margin-top: 1rem;
+    }
+
+    .faq-q {
+      font-size: 0.96rem;
+      font-weight: 550;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact & Footer */
+    .contact-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(
+          circle at 0 0,
+          rgba(52, 211, 153, 0.16),
+          transparent 55%
+        ),
+        rgba(15, 23, 42, 0.98);
+      padding: 1.6rem 1.5rem;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 1rem 0 1.4rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header / Nav -->
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <div class="nav-left">
+            <div class="logo-mark">CL</div>
+            <div class="logo-text">
+              <div class="logo-title">Crypto Legal</div>
+              <div class="logo-sub">Crypto · Web3 · Digital Assets</div>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#recovery">Recovery</a>
+            <a href="#inheritance">Inheritance</a>
+            <a href="#process">Process</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <a
+              href="mailto:Cryptolawyer08@proton.me?subject=Crypto%20Legal%20-%20Initial%20Enquiry"
+              class="btn"
+              >Schedule a consult →</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-left">
+              <div class="eyebrow">
+                <div class="eyebrow-dot"></div>
+                Crypto · Web3 · Digital Asset Law
+              </div>
+              <h1 class="hero-title">
+                Crypto & Web3 legal services
+                <span>for a chain-native world.</span>
+              </h1>
+              <p class="hero-sub">
+                We help private clients, founders and family offices trace,
+                freeze and recover digital assets, and structure Web3 wealth so
+                it remains compliant – and truly transferable across borders and
+                generations.
+              </p>
+              <div class="hero-badges">
+                <div class="badge">
+                  <span class="badge-dot"></span> End-to-end asset recovery
+                </div>
+                <div class="badge">
+                  <span class="badge-dot"></span> Legal + on-chain task force
+                </div>
+                <div class="badge">
+                  <span class="badge-dot"></span> Multi-jurisdiction strategy
+                </div>
+              </div>
+              <div class="hero-actions">
+                <a
+                  href="mailto:Cryptolawyer08@proton.me?subject=Crypto%20Legal%20-%20Case%20Review"
+                  class="btn"
+                  >Request a preliminary case review</a
+                >
+                <a href="#about" class="btn btn-outline"
+                  >Learn more about our system</a
+                >
+              </div>
+              <div class="hero-note">
+                No recovery guarantees – only a clear, evidence-based roadmap so
+                you decide how far to proceed.
+              </div>
+            </div>
+
+            <aside class="hero-right" aria-label="Snapshot">
+              <div class="hero-right-title">
+                When digital assets meet real-world law
+              </div>
+              <div class="hero-right-sub">
+                A structured framework that connects courts, exchanges and
+                on-chain data – with one team accountable for every step.
+              </div>
+
+              <div class="hero-metrics">
+                <div class="metric">
+                  <div class="metric-label">Focus</div>
+                  <div class="metric-value">Crypto & Web3 only</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Scope</div>
+                  <div class="metric-value">Recovery · Inheritance</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Regions</div>
+                  <div class="metric-value">US · HK · SG+</div>
+                </div>
+              </div>
+
+              <ul class="hero-list">
+                <li>Case diagnosis: civil vs criminal, forum and remedies.</li>
+                <li>Freeze first, argue later – emergency preservation tools.</li>
+                <li>On-chain forensic tracing, KYC/KYT and platform escalation.</li>
+                <li>
+                  Digital-asset-aware estate, trust and family-office planning.
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who we serve -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Who we work with</div>
+            <h2 class="section-title">Clients we act for</h2>
+            <p class="section-sub">
+              Whether your priority is getting stolen assets back, or ensuring
+              your Web3 wealth can actually be inherited and enforced in court,
+              we design a legal pathway that matches your risk tolerance and
+              time horizon.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">Private clients & founders</div>
+              <div class="card-sub">
+                Individuals and families facing critical events in their digital
+                asset portfolios.
+              </div>
+              <ul>
+                <li>High-net-worth individuals and families hit by scams, rug pulls or hacked wallets.</li>
+                <li>Founders, early employees and investors with significant token, DeFi or NFT exposure.</li>
+                <li>Holders using OTC desks, offshore companies or informal arrangements.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Family offices & fiduciaries</div>
+              <div class="card-sub">
+                Institutions that now must treat crypto as a core asset class,
+                not an experiment.
+              </div>
+              <ul>
+                <li>Family offices managing cross-border estates including digital assets.</li>
+                <li>Trustees and executors responsible for wallets, exchanges and structured funds.</li>
+                <li>Professionals needing to regularise “anonymous” or offshore holdings.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recovery -->
+      <section class="section" id="recovery">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Service · Asset recovery</div>
+            <h2 class="section-title">Crypto asset recovery system</h2>
+            <p class="section-sub">
+              Most clients come to us after a critical event – a phishing scam,
+              fraudulent “OTC” trade, exchange freeze or misappropriation by a
+              trusted counterparty. We respond with an end-to-end recovery
+              system built on three modules.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <div class="list-block">
+                <div class="list-block-title">
+                  Module 1 · Case assessment & strategy
+                </div>
+                <p>
+                  Understanding the legal nature of your loss, and what a
+                  realistic recovery plan looks like.
+                </p>
+                <ul>
+                  <li>Legal characterisation: fraud, civil wrong or criminal conduct.</li>
+                  <li>Evidence gap mapping for police reports or civil claims.</li>
+                  <li>Risk and outcome assessment in plain language.</li>
+                  <li>Jurisdiction optimisation: primary and backup forums.</li>
+                </ul>
+              </div>
+
+              <div class="list-block">
+                <div class="list-block-title">
+                  Module 2 · Asset preservation – freeze first
+                </div>
+                <p>
+                  Stopping further dissipation of assets before arguments play
+                  out in full.
+                </p>
+                <ul>
+                  <li>On-chain and platform freezes for exchanges and custodians.</li>
+                  <li>Evidence preservation and notarisation of key records.</li>
+                  <li>Mareva injunctions and emergency relief where appropriate.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div class="list-block">
+                <div class="list-block-title">
+                  Module 3 · Technology & platform collaboration
+                </div>
+                <p>
+                  Turning raw blockchain data and KYC records into court-ready
+                  evidence and leverage.
+                </p>
+                <ul>
+                  <li>On-chain profiling and forensic tracing with visual reports.</li>
+                  <li>Tailored requests to exchanges, banks and stablecoin issuers.</li>
+                  <li>Escalation strategies when response times or cooperation fall short.</li>
+                </ul>
+              </div>
+
+              <div class="card" style="margin-top: 0.6rem;">
+                <div class="card-title">
+                  Outcome: a structured, actionable roadmap
+                </div>
+                <div class="card-sub">
+                  Legal tools, on-chain data and platform processes, aligned
+                  under one accountable team.
+                </div>
+                <div class="pill-row">
+                  <div class="pill">Freeze orders & injunctions</div>
+                  <div class="pill">Civil & criminal pathways</div>
+                  <div class="pill">On-chain forensics</div>
+                </div>
+                <p style="font-size: 0.85rem; margin-top: 0.6rem;">
+                  Tagline: <strong>“Recover every cent that belongs to you on-chain.”</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inheritance & planning -->
+      <section class="section" id="inheritance">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Service · Inheritance & wealth</div>
+            <h2 class="section-title">
+              Crypto in inheritance & wealth planning
+            </h2>
+            <p class="section-sub">
+              Traditional estate tools were not built for seed phrases,
+              multi-sig wallets or tokens scattered across CeFi, DeFi and cold
+              storage. We embed crypto into your probate, trust and tax
+              structures from day one.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <div class="list-block">
+                <div class="list-block-title">
+                  Digital executor & estate representative
+                </div>
+                <p>
+                  Ensuring somebody has both the legal authority and the
+                  technical mandate to manage digital assets.
+                </p>
+                <ul>
+                  <li>Court recognition or appointment of estate representatives with digital-asset mandates.</li>
+                  <li>Design of the “Digital Executor” role for keys, MPC shares and on-chain operations.</li>
+                  <li>Protocols for audits, recovery and wallet migrations post-death or incapacity.</li>
+                </ul>
+              </div>
+
+              <div class="list-block">
+                <div class="list-block-title">
+                  Multi-sig / MPC trust architecture
+                </div>
+                <p>
+                  Aligning modern key management with classic fiduciary roles.
+                </p>
+                <ul>
+                  <li>Role separation for settlors, trustees, protectors and digital executors.</li>
+                  <li>Threshold key designs with joint authorisation on major transfers.</li>
+                  <li>Enforceable documentation and well-drafted service agreements.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div class="list-block">
+                <div class="list-block-title">
+                  Cross-border probate & asset delivery
+                </div>
+                <p>
+                  Making sure your heirs can actually receive what you intended,
+                  across borders.
+                </p>
+                <ul>
+                  <li>Coordination of main probate and resealing or local grants.</li>
+                  <li>Unified digital-asset inventories with addresses, TxIDs and valuations.</li>
+                  <li>Trigger-based distributions executed via joint signatures.</li>
+                </ul>
+              </div>
+
+              <div class="list-block">
+                <div class="list-block-title">Tax & compliance shield</div>
+                <p>
+                  Balancing legitimate privacy, tax efficiency and regulatory
+                  expectations.
+                </p>
+                <ul>
+                  <li>Estate-tax simulations and deferral / charitable structures.</li>
+                  <li>KYC / AML and KYT-based address and transaction path classification.</li>
+                  <li>Periodic training and reporting for trustees and family-office staff.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">How we work</div>
+            <h2 class="section-title">A structured, full-lifecycle approach</h2>
+            <p class="section-sub">
+              We treat each matter as a project: clear objectives, defined
+              workstreams and disciplined reporting – combining legal strategy,
+              on-chain analytics and platform relations.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">Step 1 · Confidential intake & triage</div>
+              <div class="card-sub">
+                Share a short case summary and supporting materials through
+                encrypted channels.
+              </div>
+              <ul>
+                <li>Conflicts checks and suitability screening.</li>
+                <li>Initial scoping call where we are the right fit.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Step 2 · Preliminary assessment</div>
+              <div class="card-sub">
+                Mapping out what is possible before you commit.
+              </div>
+              <ul>
+                <li>For recovery: legal and technical assessment, quick-win freeze opportunities.</li>
+                <li>For planning: mapping current wallet structure, risks and counterparties.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Step 3 · Engagement & action plan</div>
+              <div class="card-sub">
+                Turning strategy into a disciplined workplan.
+              </div>
+              <ul>
+                <li>Defined objectives, jurisdictions, timelines and fee arrangements.</li>
+                <li>Written plan listing legal steps, technical workstreams and platform interactions.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Step 4 · Execution & reporting</div>
+              <div class="card-sub">
+                Coordinated execution, with you kept up to date.
+              </div>
+              <ul>
+                <li>One project manager coordinating lawyers, analysts and external partners.</li>
+                <li>Regular updates on freezes, information received, court processes and negotiations.</li>
+                <li>Closing documentation and, where needed, ongoing monitoring or governance support.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jurisdictions -->
+      <section class="section" id="jurisdictions">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Scope</div>
+            <h2 class="section-title">Jurisdictions & platforms</h2>
+            <p class="section-sub">
+              Each case is unique, but we are particularly active in
+              jurisdictions and platforms where on-chain realities can be
+              effectively linked to real-world enforcement.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">Key jurisdictions</div>
+              <div class="card-sub">
+                Common-law hubs with robust asset-preservation tools and
+                recognition mechanisms.
+              </div>
+              <ul>
+                <li>United States</li>
+                <li>Hong Kong</li>
+                <li>Singapore</li>
+                <li>Other common-law jurisdictions as appropriate</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Platforms & counterparties</div>
+              <div class="card-sub">
+                Institutions that hold the KYC and transactional records needed
+                to connect chains and courts.
+              </div>
+              <ul>
+                <li>Major centralized exchanges and custodial banks</li>
+                <li>Stablecoin issuers and payment processors</li>
+                <li>Web3 infrastructure and service providers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">FAQ</div>
+            <h2 class="section-title">Questions we are often asked</h2>
+          </div>
+
+          <div class="faq">
+            <div class="faq-item">
+              <div class="faq-q">
+                Q1. Can you guarantee that my stolen crypto will be recovered?
+              </div>
+              <div class="faq-a">
+                No law firm or service provider can honestly guarantee recovery.
+                We instead commit to giving you a clear, evidence-based
+                assessment of your chances, options and costs before you decide
+                how far to proceed.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">
+                Q2. I am not sure whether my case is “criminal” or “civil”. Does
+                it matter?
+              </div>
+              <div class="faq-a">
+                Yes. The classification affects which authorities will accept
+                your complaint, which courts have jurisdiction and what remedies
+                are available. Our joint legal + on-chain review is designed to
+                draw that line and avoid wasted time and effort.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">
+                Q3. My crypto is held through offshore companies and complex
+                structures. Can you still help?
+              </div>
+              <div class="faq-a">
+                Yes. We routinely work with disclosure regimes, fund structures
+                and anonymous holding architectures, and can advise how to
+                regularise or redesign them while preserving legitimate privacy
+                and tax advantages.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-title">Let’s talk – confidentially.</div>
+            <div class="contact-sub">
+              If you are facing a loss event or want to bring your digital asset
+              wealth into a coherent legal structure, we are happy to explore
+              whether we are the right fit.
+            </div>
+            <div class="contact-actions">
+              <a
+                href="mailto:Cryptolawyer08@proton.me?subject=Crypto%20Legal%20-%20Initial%20Enquiry"
+                class="btn"
+                >Email us</a
+              >
+              <a href="https://t.me/Cryptolawyer08" class="btn btn-outline"
+                >Message on Telegram</a
+              >
+            </div>
+            <div class="contact-note">
+              Please do not send private keys or seed phrases. We will let you
+              know what we need for an assessment.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Crypto Legal. All rights reserved.</div>
+        <div class="footer-links">
+          <span>Crypto · Web3 · Digital Asset Law</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent =
+      new Date().getFullYear().toString();
+  </script>
+</body>
+</html>
